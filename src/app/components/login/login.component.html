@@ -1,0 +1,91 @@
+<div class="wrapper ">
+    <div class="login-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="#pablo"><b>Valar Dohaeris</b></a>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="panel-header panel-header-sm">
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="card card-user" style="margin-top:-20px;">
+              <div class="image">
+                <img src="../assets/img/bankbg.jpg" alt="...">
+              </div>
+              <div class="card-body">
+                <div class="author">
+                  <a href="#">
+                    <img class="avatar border-gray" src="../assets/img/profile.jpg" alt="...">
+                    <!-- <h5 class="title">Login</h5> -->
+                  </a>
+                </div>
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 pr-1 loginField">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" [(ngModel)]="user.email" placeholder="Email">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 pr-1 loginField">
+                      <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="passwd" [(ngModel)]="user.password" class="form-control" >
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="button-container">
+                      <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg" (click)="login()">
+                        LOGIN
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <hr>
+              <div class="button-container">
+                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+                  <i class="fab fa-google-plus-g"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+      <!-- <toaster-container [toasterconfig]="toasterconfig"></toaster-container> -->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="copyright">
+            &copy;
+             2018, Designed by
+            <a href="https://www.ibm.com/in-en/" target="_blank">IBM India Pvt. Ltd.</a>. Coded by
+            <a href="#" target="_blank">B.I.G</a>.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>

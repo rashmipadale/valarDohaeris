@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+.loginField{
+    width: 100% !important;
+    max-width: 100% !important;
+    flex:auto !important;
+}
+
+div.removed-item {
+    animation: removed-item-animation .5s cubic-bezier(.65,-0.02,.72,.29);
+}
+ 
+@keyframes removed-item-animation {
+   0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+ 
+    30% {
+        opacity: 1;
+        transform: translateX(50px);
+    }
+ 
+    80% {
+        opacity: 1;
+        transform: translateX(-800px);
+    }
+ 
+    100% {
+        opacity: 0;
+        transform: translateX(-800px);
+    }
+}
+
+div.restored-item {
+    animation: 
+        openspace .3s ease forwards, 
+        restored-item-animation .5s .0s cubic-bezier(.14,.25,.52,1.56) forwards;
+}
+ 
+@keyframes openspace {
+    to {
+        height: auto;
+    }
+}
+ 
+@keyframes restored-item-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+ 
+    70% {
+        opacity: 1;
+        transform: translateX(-50px);
+    }
+ 
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.tableIcons{
+    margin-right:20px;
+    cursor:pointer;
+    color:green;
+}
+.tableIcons i{
+    font-weight: bolder;
+}
+.tableIcons i.red{color: red}
+.tableIcons i.green{color: green}
+.table-responsive{overflow: auto !important;}

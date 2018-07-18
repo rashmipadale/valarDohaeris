@@ -1,0 +1,47 @@
+<div class="wrapper ">
+  <div class="sidebar" data-color="orange">
+    <!--
+      Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+  -->
+    <div class="logo">
+      <a href="#" class="simple-text logo-normal">
+        <b>Valar Dohaeris</b>
+      </a>
+    </div>
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li [ngClass]="{'active': selectedMenu=='dashboard'}" *ngIf="user.role=='cardIssuer' || user.role=='govt'">
+          <a [routerLink]="['./']" (click)="setMenu('dashboard')">
+            <i class="now-ui-icons design_app"></i>
+            <p>Dashboard</p>
+          </a>
+        </li>
+        <li [ngClass]="{'active': selectedMenu=='cardissuer'}" *ngIf="user.role=='cardIssuer'">
+          <a [routerLink]="['./cardissuer']" (click)="setMenu('cardissuer')">
+            <i class="now-ui-icons shopping_credit-card"></i>
+            <p>Issue Card</p>
+          </a>
+        </li>
+        <li [ngClass]="{'active': selectedMenu=='linkacc'}" *ngIf="user.role=='cardIssuer'">
+          <a [routerLink]="['./acclink']" (click)="setMenu('linkacc')">
+            <i class="now-ui-icons design_vector"></i>
+            <p>Link Accounts</p>
+          </a>
+        </li>
+        <li [ngClass]="{'active': selectedMenu=='fundapprove'}" *ngIf="user.role=='govt'">
+          <a [routerLink]="['./fundapprove']" (click)="setMenu('fundapprove')">
+            <i class="now-ui-icons business_money-coins"></i>
+            <p>Funds Approvals</p>
+          </a>
+        </li>
+        <li [ngClass]="{'active': selectedMenu=='linkapprove'}" *ngIf="user.role=='otherBank'">
+          <a [routerLink]="['./linkapprove']" (click)="setMenu('linkapprove')">
+            <i class="now-ui-icons education_paper"></i>
+            <p>Link Approvals</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet></router-outlet>  
+</div>
