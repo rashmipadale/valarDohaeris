@@ -1,0 +1,5 @@
+applications:
+- name: testing_app
+  random-route: true
+  memory: 64M
+  buildpack: staticfile_buildpack
